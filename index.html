@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Task Hub</title>
+  </head>
+  <body>
+    <div class="overlay-new-task">
+      <div class="overlay-windows">
+        <h2>New Task : </h2>
+        <form>
+          <input type="text" name="title" id="title" placeholder="Title" maxlength="25" required></textarea>
+          <textarea name="details" id="details" placeholder="Details" maxlength="300"></textarea>
+          <div class="due-date">
+            <p>Due Date : </p>
+            <input type="date" name="date"  id="date" required>
+          </div>
+          <div class="priority">
+            <label for="important">Top priority ?</label>
+            <input type="checkbox" name="important" id="important">
+          </div>
+          <button type="submit">New Task</button>
+        </form>
+      </div>
+    </div>
+    <div class="content">
+      <div class="logo-area">
+        <img src="images/main-logo.svg" alt="Logo">
+        <h1>Task Hub</h1>
+      </div>
+      <div class="header">
+        <div class="user-infos">
+          <img src="images/Epineux.jpg" alt="avatar" class="avatar">
+          <h2 class="username">@Epineux</h2>
+        </div>
+        <div class="settings">
+          <img src="images/cog.svg" alt="settings">
+          <img src="images/theme-light-dark.svg" alt="theme" class="theme-icon">
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-tasks">
+          <h2>My Tasks</h2>
+          <nav>
+            <ul class="task-list">
+              <li><input type="radio" id="task" name="task" checked> All</input></li>
+              <li><input type="radio" id="task" name="task"> For Today</input></li>
+              <li><input type="radio" id="task" name="task"> For This Week</input></li>
+              <li><input type="radio" id="task" name="task"> Important</input></li>
+            </ul>
+          </nav>
+          <button>New Task</button>
+        </div>
+        <div class="sidebar-projects">
+          <h2>My Projects</h2>
+          <nav>
+            <ul class="project-list">
+              <p class="empty">empty</p>
+            </ul>
+          </nav>
+          <button>New Project</button>
+        </div>
+        <div class="projects"></div>
+        <div class="footer">
+          <img src="images/github-logo.svg" alt="github">
+          <p>Epineux - 2024</p>
+        </div>
+      </div>
+      <main class="main-container">
+        <h1 class="main-container-title">All Tasks</h1>
+        <div class="task-card">
+          <div class="task-infos">
+            <input type="checkbox">
+            <h2>This_task</h2>
+          </div>
+          <p>12/02/2024</p>
+          <div class="task-settings">
+            <img src="images/information-outline.svg" alt="more-infos">
+            <img src="images/star-outline.svg" alt="important">
+            <img src="images/dots-vertical.svg" alt="edit">
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
