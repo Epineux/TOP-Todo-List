@@ -13,7 +13,7 @@
     <div class="overlay-new-task">
       <div class="overlay-windows">
         <h2>New Task : </h2>
-        <form>
+        <form class="new-task-form">
           <input type="text" name="title" id="title" placeholder="Title" maxlength="25" required></textarea>
           <textarea name="details" id="details" placeholder="Details" maxlength="300"></textarea>
           <div class="due-date">
@@ -21,8 +21,8 @@
             <input type="date" name="date"  id="date" required>
           </div>
           <div class="priority">
-            <label for="important">Top priority ?</label>
-            <input type="checkbox" name="important" id="important">
+            <label for="priority">Top priority ?</label>
+            <input type="checkbox" name="priority" id="priority">
           </div>
           <button type="submit">New Task</button>
         </form>
@@ -54,7 +54,6 @@
               <li><input type="radio" id="task" name="task"> Important</input></li>
             </ul>
           </nav>
-          <button>New Task</button>
         </div>
         <div class="sidebar-projects">
           <h2>My Projects</h2>
@@ -66,24 +65,17 @@
           <button>New Project</button>
         </div>
         <div class="projects"></div>
+      </div>
+      <main class="main-container">
+        <div class="main-container-top">
+          <h1 class="main-container-title">All Tasks</h1>
+          <button class="add-task">Add Task</button>
+        </div>
+        <div class="tasks-container">
+        </div>
         <div class="footer">
           <img src="images/github-logo.svg" alt="github">
           <p>Epineux - 2024</p>
-        </div>
-      </div>
-      <main class="main-container">
-        <h1 class="main-container-title">All Tasks</h1>
-        <div class="task-card">
-          <div class="task-infos">
-            <input type="checkbox">
-            <h2>This_task</h2>
-          </div>
-          <p>12/02/2024</p>
-          <div class="task-settings">
-            <img src="images/information-outline.svg" alt="more-infos">
-            <img src="images/star-outline.svg" alt="important">
-            <img src="images/dots-vertical.svg" alt="edit">
-          </div>
         </div>
       </main>
     </div>
